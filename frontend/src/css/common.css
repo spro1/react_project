@@ -1,0 +1,166 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+    background-color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    height: calc(100% - 40px);
+}
+
+a{
+    color : #fff;
+}
+a:hover{
+    color : #fff;
+}
+/* nav */
+.topBar{
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    background-color : #0f4c81;
+    z-index: 1;
+}
+
+.navbar-brand, .nav-link{
+    color : #fff !important;
+}
+.update-date{
+    margin-top: 60px;
+    margin-right: 15px;
+    text-align:right;
+    font-size: 11px;
+}
+
+.search-bar{
+    position: relative;
+    width: 80%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+}
+
+.search-icon{
+    position: absolute;
+    color: #638cc7;
+    left : 10px;
+    top : 13px;
+}
+
+.search-form{
+    width: calc(100% - 100px);
+    height: 64px;
+    display: block;
+    overflow: visible;
+    border: 1px solid #638cc7;
+    outline: 0;
+    padding: 0 10px 0 60px;
+    font-size: 18px;
+}
+
+.search-btn{
+    position: absolute;
+    height: 64px;
+    top: 0;
+    right: 0;
+    width: 100px;
+    background: #638cc7;
+    color: #fff;
+    text-indent: 0;
+    overflow: visible;
+    border: 0;
+}
+button:focus{
+    outline: none;
+}
+
+/* board */
+.board{
+    margin-top: 30px;
+    border-radius: 2px;
+    position: relative;
+    display: block;
+    /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); */
+    table-layout: fixed;
+}
+
+.board-top-border{
+    border-top: 3px solid #6ea2d5;
+}
+
+.board-header.with-border{
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.board-header{
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+
+.board-title{
+    display: inline-block;
+    font-size: 15px;
+    margin: 0;
+    line-height: 1;
+}
+
+.table>thead>tr,
+.table>tbody>tr {
+    font-size: 12px;
+}
+
+.table>thead>tr>th {
+    border-bottom: 2px solid #f4f4f4
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.table>tbody>tr:hover{
+    color: #3ca3ed;
+    cursor: pointer;
+}
+
+/* page */
+.page-first{
+    margin-left: auto;
+}
+.page-last{
+    margin-right: auto;
+}
+
+.page-link{
+    color: #72c6ff;
+    border: 0;
+}
+
+.active{
+    font-weight: bold;
+}
+
+.active>a{
+    color: #004bff;
+}
+
+.page-icon{
+    border : 0;
+}
+
+/* footer */
+.footer{
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+

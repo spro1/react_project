@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Post
+from .models import Rss
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -10,3 +11,15 @@ class PostSerializer(serializers.ModelSerializer):
             'content',
         )
         model = Post
+
+
+class RssSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = (
+            'author',
+            'title',
+            'href',
+            'category',
+            'upload',
+        )
+        model = Rss
