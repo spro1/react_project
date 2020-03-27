@@ -36,3 +36,8 @@ class CompanyRss(generics.ListCreateAPIView):
 class NewsRss(generics.ListCreateAPIView):
     queryset = Rss.objects.filter(category="IT NEWS").order_by('-upload')
     serializer_class = RssSerializer
+
+
+class SoloRss(generics.ListCreateAPIView):
+    queryset = Rss.objects.filter(category="개인 블로그").order_by('-upload')
+    serializer_class = RssSerializer

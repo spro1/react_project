@@ -9,4 +9,5 @@ urlpatterns = [
     path('rss/<int:pk>/', views.SortRss.as_view()),
     path('rss/company', views.CompanyRss.as_view()),
     path('rss/news', views.NewsRss.as_view()),
+    path('rss/solo', views.SoloRss.as_view()),
 ]

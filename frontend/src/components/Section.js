@@ -8,13 +8,11 @@ export default class Section extends Component{
     constructor(props) {
         super(props);
 
-        var path = window.location.pathname;
-
         this.state = {
             rss: [],
+            filterRss : [],
             pageOfItems: [],
-            api : "",
-            path : path
+            api : ""
         };
         this.onChangePage = this.onChangePage.bind(this);
     }
@@ -23,7 +21,7 @@ export default class Section extends Component{
         // update state with new page of items
         this.setState({ pageOfItems: pageOfItems });
     }
-
+    /*
     async componentDidMount() {
         if(this.state.path === "/news"){
             this.state.api = "http://127.0.0.1:8000/api/rss/news";
@@ -35,6 +33,7 @@ export default class Section extends Component{
         try {
             const res = await fetch(this.state.api);
             const rss = await res.json();
+
             this.setState({
                 rss
             });
@@ -42,6 +41,7 @@ export default class Section extends Component{
             console.log(e);
         }
     }
+    */
 
     openURL(url){
         window.open(url);
@@ -74,7 +74,7 @@ export default class Section extends Component{
                         ))}
                         </tbody>
                     </Table>
-                    <Page items={this.state.rss} onChangePage={this.onChangePage} />
+                    <Page items={this.props.data} onChangePage={this.onChangePage} />
                 </div>
             </section>
         );
