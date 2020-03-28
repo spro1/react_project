@@ -10,4 +10,5 @@ urlpatterns = [
     path('rss/company', views.CompanyRss.as_view()),
     path('rss/news', views.NewsRss.as_view()),
     path('rss/solo', views.SoloRss.as_view()),
+    path('rss/economy', views.EconomyRss.as_view()),
 ]

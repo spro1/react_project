@@ -17,12 +17,13 @@ class TopNav extends Component{
     render(){
         return(
             <Navbar className="topBar">
-                <Navbar.Brand href="#home">RSS Reader</Navbar.Brand>
+                <Navbar.Brand href="/">RSS Reader</Navbar.Brand>
                     <Nav className="mr-auto">
-                    <Nav.Link href="/">전체보기</Nav.Link>
-                    <Nav.Link href="/news">IT NEWS</Nav.Link>
-                    <Nav.Link href="/company">기업 블로그</Nav.Link>
-                    <Nav.Link href="/solo">개인 블로그</Nav.Link>
+                        <Nav.Link href="/">전체보기</Nav.Link>
+                        <Nav.Link href="/news">IT NEWS</Nav.Link>
+                        <Nav.Link href="/company">기업 블로그</Nav.Link>
+                        <Nav.Link href="/solo">개인 블로그</Nav.Link>
+                        <Nav.Link href="/economy">경제 NEWS</Nav.Link>
                 </Nav>
                 <Form inline>
                     <a href="http://github.com/spro1"><Icon size={36} icon={github} style={{marginRight : 10}}/></a>

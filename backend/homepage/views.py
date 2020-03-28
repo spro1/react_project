@@ -19,7 +19,7 @@ class DetailPost(generics.RetrieveUpdateDestroyAPIView):
 
 
 class ListRss(generics.ListCreateAPIView):
-    queryset = Rss.objects.all().order_by('-upload')
+    queryset = Rss.objects.filter().exclude(category="Economy NEWS").order_by('-upload')
     serializer_class = RssSerializer
 
 
@@ -40,4 +40,9 @@ class NewsRss(generics.ListCreateAPIView):
 
 class SoloRss(generics.ListCreateAPIView):
     queryset = Rss.objects.filter(category="개인 블로그").order_by('-upload')
+    serializer_class = RssSerializer
+
+
+class EconomyRss(generics.ListCreateAPIView):
+    queryset = Rss.objects.filter(category="Economy NEWS").order_by('-upload')
     serializer_class = RssSerializer

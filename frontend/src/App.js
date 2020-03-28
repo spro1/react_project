@@ -19,6 +19,7 @@ class App extends Component {
             word: "",
             api: "",
             rss:[],
+            filter:[],
             path:path
 
         };
@@ -29,6 +30,10 @@ class App extends Component {
             this.state.api = "http://127.0.0.1:8000/api/rss/news";
         }else if(this.state.path === "/company") {
             this.state.api = "http://127.0.0.1:8000/api/rss/company";
+        }else if(this.state.path === "/solo") {
+            this.state.api = "http://127.0.0.1:8000/api/rss/solo";
+        }else if(this.state.path === "/economy"){
+            this.state.api = "http://127.0.0.1:8000/api/rss/economy";
         }else{
             this.state.api = "http://127.0.0.1:8000/api/rss";
         }
@@ -37,7 +42,8 @@ class App extends Component {
             const rss = await res.json();
 
             this.setState({
-                rss
+                rss,
+                filter:rss
             });
         } catch (e) {
             console.log(e);
@@ -59,14 +65,16 @@ class App extends Component {
                             filterRss = filterRss.filter((item) =>{
                                 return item.title.toLowerCase().search(_mode.toLocaleLowerCase()) !==-1;
                             });
+                        }else{
+                            filterRss = this.state.rss;
                         }
 
                         this.setState({
                             word:_mode,
-                            rss: filterRss
+                            filter: filterRss
                         });
-                    }.bind(this)} data={this.state.rss}></Main>
-                    <Section data={this.state.rss}></Section>
+                    }.bind(this)}></Main>
+                    <Section data={this.state.filter}></Section>
                 </Container>
                 <Footer></Footer>
             </div>
